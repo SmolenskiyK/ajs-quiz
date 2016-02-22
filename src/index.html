@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+   </head>
+   <body ng-strict-di ng-app="quiz_ajs" ng-controller="MainController as main">
+
+      <quiz list="main.listOfQuestions"></quiz>
+
+      {% for (var chunk in o.htmlWebpackPlugin.assets) { %}
+      <script src="{%=o.htmlWebpackPlugin.assets[chunk]%}"></script>
+      {% } %}
+
+   </body>
+</html>

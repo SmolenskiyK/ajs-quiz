@@ -1,0 +1,4 @@
+<h2>Quiz</h2>
+<quiz-item question="current.word" options="current.options"
+           select="select" is-correct="isCorrect" ng-if="current"></quiz-item>
+<div ng-if="!current">{{result}}</div>

@@ -1,0 +1,16 @@
+<div>
+   <h2>{{question}}</h2>
+
+   <ul>
+      <li ng-repeat="option in options">
+         <label>
+            <input type="radio" name="options" ng-model="answer" ng-change="choice(option)" ng-value="option" />{{option}}
+         </label>
+      </li>
+   </ul>
+
+   <button ng-show="answer !== ''"
+           ng-click="choice(quiz.translate === answer)">
+      Next
+   </button>
+</div>
