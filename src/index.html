@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link rel="stylesheet" type="text/css" href="/node_modules/angular-material/angular-material.css">
+    <link rel="stylesheet" type="text/css" href="/src/main.css">
+</head>
+
+<body ng-strict-di ng-app="quiz_ajs" ng-controller="MainController as main">
+    <md-content class="md-padding" layout-xs="column" layout="row">
+        <md-card>
+            <quiz list="main.listOfQuestions"></quiz>
+            {% for (var chunk in o.htmlWebpackPlugin.assets) { %}
+            <script src="{%=o.htmlWebpackPlugin.assets[chunk]%}"></script>
+            {% } %}
+        </md-card>
+    </md-content>
+</body>
+
+</html>

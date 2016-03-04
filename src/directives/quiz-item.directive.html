@@ -1,0 +1,9 @@
+<div>
+    <h1 class="md-title"> {{question}}</h1>
+
+    <md-radio-group ng-change="choice()" ng-model="answer">
+        <md-radio-button ng-repeat ="option in options" name="options" ng-value="option" ng-disabled="answer !== ''">
+        <label class="{{getClassName(option)}}">{{option}}</label>
+        </md-radio-button>
+    </md-radio-group>
+</div>
