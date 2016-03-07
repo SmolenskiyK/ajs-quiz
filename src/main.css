@@ -8,3 +8,22 @@
 .wrong-user-name{
    color: red;
 }
+table {
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+    color: #424242;
+}
+thead {
+    background-color: #4fc3f7;
+}
+td {
+    background: #b3e5fc;
+}
+th,
+td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: white;
+}

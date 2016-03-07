@@ -46,6 +46,6 @@ function OneOfFourController($scope, $timeout) {
     $scope.$watch('question', () => vm.answer = '');
 
     function _choice() {
-        vm.select(vm.answer);
+		vm.select(vm.answer);
     }
 }

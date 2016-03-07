@@ -25,5 +25,5 @@ default class QuizResultDirective {
     /* --- api -- */
 		vm.correctCount = 0;
     	vm.inCorrectCount = 0;
-    	vm.unansweredCount = vm.list.length;
+    	vm.unansweredCount = vm.listResults.length;
 	}

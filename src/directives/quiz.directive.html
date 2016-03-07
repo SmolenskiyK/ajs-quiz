@@ -11,7 +11,7 @@
     <p>User: {{userName}}</p>
     <h3 ng-show="questionCount<=list.length">Word № {{questionCount}}</h3>
     <quiz-item question="current.word" options="current.options" select="select" correct="current.translate" ng-if="current"></quiz-item>
-   	<quiz-result list-results = "list" user ="userName"></quiz-result>
+   	<quiz-result list-results = "list" user ="userName" ng-if="questionCount>list.length"></quiz-result>
     <md-button class="md-raised md-primary" ng-show="questionCount<=list.length" ng-click="next()">NEXT WORD</md-button>
 
 </md-card-content>

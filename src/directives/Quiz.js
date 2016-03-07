@@ -26,7 +26,6 @@ function QuizController($scope) {
     vm.select = select;
     vm.next = _next;
     vm.current = null;
-    vm.result = _result;
 	vm.userName = '';
    	vm.setUserName = _setUserName;
    	vm.wrongNameInputMessage
@@ -48,21 +47,14 @@ function QuizController($scope) {
    	var index = 0;
     _next();
 
-    function _result() {
-        return vm.correctCount > 5 ?
-            'You win!' : 'You loose!';
-    }
-
     function _next() {
         if (vm.questionCount <= vm.list.length) {
-            vm.current = vm.list[index++];
+			vm.current = vm.list[index++];
             vm.questionCount++;
         }
     }
 	
     function select(result) {
-        vm.current.translate === result ?
-            vm.correctCount++ : vm.inCorrectCount++;
-        vm.unansweredCount--;
+        vm.current.answer = result;
     }
 }

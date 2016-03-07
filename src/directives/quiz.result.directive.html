@@ -1,4 +1,18 @@
 <div>
-
-   
+<table>
+        <thead>
+            <tr>
+                <th>Word in English</th>
+                <th>Your answer</th>
+                <th>Correct translation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in listResults | filter: item.answer:item.translate">
+                <td>{{item.word}}</td>
+                <td>{{item.answer}}</td>
+                <td>{{item.translate}}</td>
+            </tr>
+        </tbody>
+    </table>   
 </div>
