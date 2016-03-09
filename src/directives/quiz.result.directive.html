@@ -1,5 +1,5 @@
 <div>
-<table>
+    <table>
         <thead>
             <tr>
                 <th>Word in English</th>
@@ -8,7 +8,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="item in listResults | filter: item.answer:item.translate">
+            <tr ng-repeat="item in listResults">
                 <td>{{item.word}}</td>
                 <td>{{item.answer}}</td>
                 <td>{{item.translate}}</td>

@@ -23,7 +23,20 @@ default class QuizResultDirective {
     const vm = $scope;
 
     /* --- api -- */
-		vm.correctCount = 0;
-    	vm.inCorrectCount = 0;
-    	vm.unansweredCount = vm.listResults.length;
+		vm.correctCount = _correctCount;
+    	vm.inCorrectCount = _inCorrectCount;
+    	vm.unansweredCount = _unansweredCount;
+        
+        /* === impl === */
+        function _correctCount(){
+            return 0;
+        }
+        
+        function _inCorrectCount(){
+            return 0;
+        }
+        
+        function _unansweredCount(){
+            return 0;
+        }
 	}
