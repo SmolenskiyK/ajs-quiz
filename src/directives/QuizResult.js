@@ -26,17 +26,27 @@ default class QuizResultDirective {
 		vm.correctCount = _correctCount;
     	vm.inCorrectCount = _inCorrectCount;
     	vm.unansweredCount = _unansweredCount;
+		vm.result = _result;
         
         /* === impl === */
         function _correctCount(){
-            return 0;
+            return vm.listResults.filter(function (item) {
+         		return item.translate === item.answer;
+      			}).length;
         }
         
         function _inCorrectCount(){
-            return 0;
+            return vm.listResults.filter(function (item) {
+         		return !!item.answer&&item.translate !== item.answer;
+      			}).length;
         }
         
         function _unansweredCount(){
-            return 0;
+            return vm.listResults.length-vm.correctCount() - vm.inCorrectCount();
         }
+		
+		const correctPercent = 0.7;
+		function _result(){
+			return Math.ceil(vm.listResults.length * correctPercent)<=vm.correctCount()? 'win' : 'lose';
+		}
 	}
