@@ -17,7 +17,7 @@ default class QuizResultDirective {
         return QuizResultDirective.instance;
     }
 };
-	function QuizResultController($scope, $timeout) {
+	function QuizResultController($scope) {
     'ngInject';
 
     const vm = $scope;

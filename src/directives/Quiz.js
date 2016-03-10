@@ -43,14 +43,11 @@ function QuizController($scope) {
 	   }
 	}
    
-   
-   	var index = 0;
     _next();
 
     function _next() {
         if (vm.questionCount <= vm.list.length) {
-			vm.current = vm.list[index++];
-            vm.questionCount++;
+			vm.current = vm.list[vm.questionCount++];            
         }
     }
 	

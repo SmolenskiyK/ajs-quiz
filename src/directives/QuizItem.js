@@ -20,7 +20,7 @@ default class OneOfFourDirective {
     }
 }
 
-function OneOfFourController($scope, $timeout) {
+function OneOfFourController($scope) {
     'ngInject';
 
     const vm = $scope;
@@ -28,8 +28,9 @@ function OneOfFourController($scope, $timeout) {
     /* --- api -- */
     vm.answer = '';
     vm.choice = _choice;
-	
-	
+
+    /* === impl === */
+
     vm.getClassName = function(option) {
         var res = '';
         if (vm.answer === '' || vm.answer !== option) {
@@ -40,12 +41,9 @@ function OneOfFourController($scope, $timeout) {
         return res;
     }
 
-    /* === impl === */
-    const TIMEOUT = 500;
-
     $scope.$watch('question', () => vm.answer = '');
 
     function _choice() {
-		vm.select(vm.answer);
+        vm.select(vm.answer);
     }
 }
